@@ -20,8 +20,7 @@
         <nav>
             <div class="logo">
                 <a href="index.php">
-                    <img src="image/
-                    logo.png" alt="logo ">
+                    <img src="image/logo.png" alt="logo ">
                 </a>
             </div>
             <div class="search">
