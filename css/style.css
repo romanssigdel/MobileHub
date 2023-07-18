@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Sono:wght@200&display=swap');
+:root{
+    /* --main-bg-color: #2874f0; */
+    --main-bg-color: rgb(33, 28, 62);
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color);
+    color: white;
+    font-family: 'Sono','consolas';
+    /* border: 2px solid red; */
+}
+nav{
+    display: flex;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 170px;
+    height: 50px;
+    padding: 13px;
+    margin-top: 5px;
+    margin-left: 90px;
+}
+.search{
+    display: flex;
+    align-items: center;
+}
+.search input{
+    width: 30vw;
+    height: 25px;
+    border-radius: 5px;
+    margin: 0 0 0 70px ;
+    padding: 0 12px ;
+}
+.btn{
+    height: 28.2px;
+    padding: 3px 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.search .btn:hover{
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.934);
+}
+nav ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 64px;
+    padding: 7px 0;
+    margin-left: 30px;
+}
+nav ul li{
+    list-style: none;
+    padding: 0 13px;
+    
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    font-weight: bolder;
+}
+
+.container{
+    /* height: 200vh; */
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f7f7fa;
+    padding: 100px;
+
+}
+.sidebar-toolbar-product_items{
+    display: flex;
+    /* margin:100px; */
+    border:1px solid rgb(219, 219, 222);
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+}
+
+.menu{
+    border:1px solid rgb(219, 219, 222);
+    width: 41vh;
+    background-color: #ffffff;
+}
+.toolbar-product_items{
+    background-color: #ffffff;
+}
+.product-items{
+    width: 72vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border:1px solid rgb(219, 219, 222);
+    /* margin: 2.65cm 0 0 0; */
+    padding: 0 0 0 0;
+    border-left: none;
+}
+
+.product-item{
+    border:1px solid rgb(219, 219, 220);
+    display: inline-block;
+    margin: 10px 10px 20px 10px;
+    height: 350px;
+    width: 200px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1;
+}
+.product-item:hover{
+    /* background-color: #ccc; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.product-item-name{
+    height: 35px;
+
+}
+.product-item-link{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.product-image-container{
+    width: 100%;
+}
+.product-image-wrapper{
+    padding-top: 83%;
+    margin: 15%;
+}
+.product-image-photo{
+    height: 180px;
+    width: 120px;
+}
+.product-details{
+    padding: 10px;
+}
+.price{
+    height: 15px;
+    width: 90px;
+    font-family: 'Montserra', sans-serif;
+}
+.price-review{
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.review-summary{
+    padding: 0 20% 0 0;
+}
+.rating-result{
+    font-family: sans-serif;
+    color: goldenrod;
+}
+.arrives{
+    margin-top: 5px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.two-days{
+    font-size: 15px;
+    font-family: sans-serif;
+    padding: 0 0 0 10px;
+}
+
+footer{
+    height: 8vh;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    color: white;
+    font-family: 'Sono','consolas';
+    text-align: center;
+}
+.flex-all-center{
+    overflow: auto;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
