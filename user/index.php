@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
-<script src="../js/script.js"></script>
+<script src="js/script.js"></script>
 
 <!-- icons -->
 <script src="https://kit.fontawesome.com/4eca1fe67d.js" crossorigin="anonymous"></script>
@@ -52,7 +52,7 @@
                                         </a>
                                         <div class='product-details'>
                                             <div class='product-item-name'>
-                                                <a class='product-item-link' href='#' onclick='loadContent('home.php');return false;'>$row[Pname]
+                                                <a class='product-item-link' href='#' onclick='loadContent('home.html');return false;'>$row[Pname]
                                                 </a>
                                             </div>
                                             <div class='price-review'>
