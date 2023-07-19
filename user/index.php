@@ -70,32 +70,6 @@
                                 ";
                         }
                         ?>
-                        <!-- <div class="product-item">
-                            <div class="product-item-info">
-                                <a href="#">
-                                    <span class="product-image-container">
-                                        <span class="product-image-wrapper">
-                                            <img class="product-image-photo" src="../img/moto-e7-power-price-in-nepal_2.png" max-width="240" max-height="300" alt="Motorola Moto E7 Power">
-                                        </span>
-                                    </span>
-                                </a>
-                                <div class="product-details">
-                                    <div class="product-item-name">
-                                        <a class="product-item-link" href="#">Moto e7 Power
-                                        </a>
-                                    </div>
-                                    <div class="price-review">
-                                        <span class="price">Rs.40000</span>
-                                        <span class="review-summary">
-                                            <img src="../img/star-icon.png" alt="">
-                                            <span class="rating-result">4.2</span>
-                                        </span>
-                                    </div>
-                                    <span class="arrives">Arrives: </span>
-                                    <span class="two-days">Within 2 days</span>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
