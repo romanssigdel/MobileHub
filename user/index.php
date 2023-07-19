@@ -52,7 +52,7 @@
                                         </a>
                                         <div class='product-details'>
                                             <div class='product-item-name'>
-                                                <a class='product-item-link' href='#' onclick='loadContent('home.html');return false;'>$row[Pname]
+                                                <a class='product-item-link' href='#' onclick='loadContent('home.php');return false;'>$row[Pname]
                                                 </a>
                                             </div>
                                             <div class='price-review'>
