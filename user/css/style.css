@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sono:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Sono:wght@200&display=swap');
 :root{
-    /* --main-bg-color: #2874f0; */
     --main-bg-color: rgb(33, 28, 62);
 }
 *{
@@ -10,10 +9,14 @@
 }
 header{
     background-color: var(--main-bg-color);
-    background-color: var(--main-bg-color);
     color: white;
     font-family: 'Sono','consolas';
-    /* border: 2px solid red; */
+    position: sticky;
+    top: 0px;
+}
+body{
+    overflow-y: 400px;
+    position: relative;
 }
 nav{
     display: flex;

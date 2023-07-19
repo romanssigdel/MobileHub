@@ -11,41 +11,19 @@
     <link rel="stylesheet" href="../css/utils.css">
     <link rel="stylesheet" href="../css/responsive.css">
 </head>
+
 <script src="../js/script.js"></script>
+
 <!-- icons -->
 <script src="https://kit.fontawesome.com/4eca1fe67d.js" crossorigin="anonymous"></script>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="index.php">
-                    <img src="image/logo.png" alt="logo ">
-                </a>
-            </div>
-            <div class="search">
-                <input type="text" name="" id="" placeholder="Search for products">
-                <button class="btn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
-            </div>
-            <ul>
-                <li><a href=""><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href=""><i class="fa-solid fa-cart-shopping"></i> Cart(0)</a></li>
-                <li> <a href=""><i class="fa-solid fa-user"></i> Hello,</a></li>
-                <li><a href="">Login</a></li>
-                <li><a href="../admin/mystore.php">Admin</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include "header.php";?>
+
     <main>
         <div class="container">
             <div class="sidebar-toolbar-product_items">
                 <div class="menu">
-                    <h3>Categories</h3>
-                    <h3>Categories</h3>
-                    <h3>Categories</h3>
-                    <h3>Categories</h3>
-                    <h3>Categories</h3>
-                    <h3>Categories</h3>
                     <h3>Categories</h3>
                 </div>
                 <div class="toolbar-product_items">
@@ -110,6 +88,7 @@
             </div>
         </div>
     </main>
+    <div style="width: 240vh; height:100vh;"></div>
     <footer class="flex-all-center">
         <p>Copyright &copy; Mycart.com</p>
     </footer>
