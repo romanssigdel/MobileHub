@@ -76,7 +76,7 @@ nav ul li a:hover{
 }
 
 .container{
-    /* height: 200vh; */
+    height: 200vh;
     display: flex;
     flex-wrap: wrap;
     background-color: #f7f7fa;
