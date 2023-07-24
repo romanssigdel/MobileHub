@@ -14,31 +14,24 @@
 
     .main-container {
         display: flex;
-        height: 500px;
         width: 100%;
-        background-color: red;
+        border: 1px solid rgb(219, 219, 222);
+        margin:100px
     }
 
     .first-col {
         width: 50vh;
-        /* height: 75%; */
-        border: 2px solid black;
-        /* padding: 10px; */
         padding-top: 10px;
+        border-right: 1px solid rgb(219, 219, 222);
 
     }
 
     .product-image-container {
         width: 100%;
-
-        /* height: 200; */
     }
 
     .product-image-wrapper {
         padding-top: 83%;
-        /* padding-bottom: 83%; */
-        border: 2px solid black;
-        /* margin: 15%; */
     }
 
     .product-image-photo {
@@ -47,18 +40,11 @@
         margin: 15%;
     }
 
-    /* .img {
-        height: 100px;
-        width: 200px;
-    } */
-
     .second-col {
-        border: 2px solid blue;
         width: 75%;
     }
 
     .third-col {
-        border: 2px solid aqua;
         width: 50%;
     }
 
@@ -71,26 +57,71 @@
     a:hover {
         font-weight: bold;
     }
+
+    .product-details {
+        display: flex;
+        width: 50vh;
+        /* height: 50%; */
+        flex-direction: column;
+        align-items: flex-start;
+        border: 2px solid red;
+    }
+
+    .product-details {
+        padding: 10px;
+    }
+
+    .price {
+        height: 15px;
+        width: 90px;
+        font-family: 'Montserra', sans-serif;
+    }
+
+    .price-review {
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .review {
+        width: 10vh;
+    }
+
+    .rate {
+        display: inline-block;
+    }
+
+    .star-icon {
+        display: inline-block;
+    }
 </style>
 
 <body>
-    <div class="esc"><a style="display:inline-block" href="index.php">Home</a>
+    <?php
+    include "header.php";
+    ?>
+    <a style="display:inline-block" href="index.php">Home</a>
         <p style="display:inline-block"> > Smartphone</p>
-    </div>
     <div class="main-container">
         <!-- fetching data -->
-        <?php include "config.php";
-        $query = mysqli_query($con, "SELECT * FROM `tblproduct` WHERE  ID='1'");
+        <?php
+        include "config.php";
+        $id = $_GET['myid'];
+
+        $query = mysqli_query($con, "SELECT * FROM `tblproduct` WHERE  $id = id");
         $check = mysqli_num_rows($query) > 0;
 
         if ($check) {
             while ($row = mysqli_fetch_assoc($query)) {
+                $pname = $row['Pname'];
+                $pprice = $row['Pprice'];
+                $pimg = $row['Pimage'];
         ?>
                 <div class="first-col">
                     <div class="product-image">
                         <!-- <span class="product-image-container" style="width: 240px;"> -->
                         <!-- <span class="product-image-wrapper"> -->
-                        <img class="product-image-photo" src="../1.png" max-width="240" max-height="300">
+                        <img class="product-image-photo" src="../admin/product/<?php echo $pimg ?>" max-width="240" max-height="300">
                         <!-- </span> -->
                         </span>
                     </div>
@@ -98,18 +129,17 @@
                 <div class="second-col">
                     <div class="product-details">
                         <div class="product-item-name">
-                            <a class="product-item-link" href="home.php" onclick="loadContent('description_page.php');return false;"><?php echo $row['Pname']; ?>
-                            </a>
+                            <a class="product-item-link" href=""><?php echo $pname; ?></a>
                         </div>
                         <div class="price-review">
-                            <span class="price"><?php echo $row['Pprice']; ?></span>
-                            <span class="review-summary">
-                                <img src='../img/star-icon.png' alt=''>
-                                <span class="rating-result">4.2</span>
-                            </span>
+                            <span class="price"><?php echo $pprice; ?></span>
                         </div>
-                        <span class='arrives'>Arrives: </span>
-                        <span class='two-days'>Within 2 days</span>
+                        <div class="review">
+                            <span class="rate">Rating: </span>
+                            <span class="star-icon"><img src='../img/star-icon.png' alt=''></span>
+                            <span class="rating-result">4.2</span>
+                        </div>
+                        
                     </div>
                 </div>
 
@@ -119,7 +149,7 @@
         } else {
             echo "nothing";
         }
-        // while ($row = mysqli_fetch_array($query)) {
+
 ?>
 </body>
 
