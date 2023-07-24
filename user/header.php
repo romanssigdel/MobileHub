@@ -25,7 +25,7 @@
                 <button class="btn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
             </div>
             <ul>
-                <li><a href=""><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
                 <li><a href=""><i class="fa-solid fa-cart-shopping"></i> Cart(0)</a></li>
                 <li> <a href=""><i class="fa-solid fa-user"></i> Hello,</a></li>
                 <li><a href="">Login</a></li>
