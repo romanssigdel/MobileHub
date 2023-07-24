@@ -43,23 +43,29 @@
 
                         if($check){
                             while($row = mysqli_fetch_assoc($query)){
+                                $pid = $row['id'];
+                                $pname = $row['Pname'];
+                                $pprice = $row['Pprice'];
+                                $pimg = $row['Pimage'];
+
                                 ?>
+                                
                                 <div class="product-item">
                                     <div class="product-item-info">
                                         <a href="#">
                                             <span class="product-image-container" style="width: 240px;">
                                                 <span class="product-image-wrapper">
-                                                    <img class="product-image-photo" src="../admin/product/<?php echo $row['Pimage']; ?>" max-width="240" max-height="300">
+                                                    <img class="product-image-photo" src="../admin/product/<?php echo $pimg?>" max-width="240" max-height="300">
                                                 </span>
                                             </span>
                                         </a>
                                         <div class="product-details">
                                             <div class="product-item-name">
-                                                <a class="product-item-link" href="home.php" onclick="loadContent('description_page.php');return false;"><?php echo $row['Pname']; ?>
+                                                <a class="product-item-link" href="description_page.php?myid=<?php echo $pid; ?>" ><?php echo $pname; ?>
                                                 </a>
                                             </div>
                                             <div class="price-review">
-                                                <span class="price"><?php echo $row['Pprice']; ?></span>
+                                                <span class="price"><?php echo $pprice; ?></span>
                                                 <span class="review-summary">
                                                     <img src='../img/star-icon.png' alt=''>
                                                     <span class="rating-result">4.2</span>
