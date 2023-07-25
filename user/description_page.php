@@ -14,9 +14,9 @@
 
     .main-container {
         display: flex;
-        width: 100%;
+        /* width: 100%; */
         border: 1px solid rgb(219, 219, 222);
-        margin:100px
+        margin:100px;
     }
 
     .first-col {
@@ -60,17 +60,13 @@
 
     .product-details {
         display: flex;
-        width: 50vh;
-        /* height: 50%; */
+        width: 65vh;
+        /* height: 92.5%; */
         flex-direction: column;
         align-items: flex-start;
         border: 2px solid red;
+        padding: 20px;
     }
-
-    .product-details {
-        padding: 10px;
-    }
-
     .price {
         height: 15px;
         width: 90px;
@@ -100,9 +96,8 @@
     <?php
     include "header.php";
     ?>
-    <a style="display:inline-block" href="index.php">Home</a>
-        <p style="display:inline-block"> > Smartphone</p>
     <div class="main-container">
+        <a style="display:inline-block" href="index.php">Home</a>
         <!-- fetching data -->
         <?php
         include "config.php";
@@ -139,6 +134,9 @@
                             <span class="star-icon"><img src='../img/star-icon.png' alt=''></span>
                             <span class="rating-result">4.2</span>
                         </div>
+                        <input type="text" name="Pname" value="" id="">
+                        <input type="number" name="" id="" min='1' max ='20' placeholder="Quantity">
+                        <input type="submit" class="btn-cart" value="Add to cart"></input>
                         
                     </div>
                 </div>
