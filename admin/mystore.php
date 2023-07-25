@@ -28,7 +28,7 @@
         <?php echo ucwords($_SESSION['admin']);?> |
         <i class="fa-solid fa-right-to-bracket"></i>
     <a href="form/logout.php" class="text-decoration-none text-white">Logout</a> |
-    <a href="../index.php" class="text-decoration-none text-white">Userpanel</a>
+    <a href="../user/index.php" class="text-decoration-none text-white">Userpanel</a>
     </span>
   </div>
 </nav>
