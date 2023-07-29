@@ -63,7 +63,7 @@
                                 <tr>
                                     <td>$rows[id]</td>
                                     <td>$rows[Pname]</td>
-                                    <td>$rows[Pprice]</td>
+                                    <td>Rs.$rows[Pprice]</td>
                                     <td><img src='$rows[Pimage]' height = '90px' width= '200px' alt='Image'></td>
                                     <td><a href='' class='btn btn-danger'>Home</a></td>
                                 </tr>
