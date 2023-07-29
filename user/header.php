@@ -12,7 +12,13 @@
 </style>
 <!-- icons -->
 <script src="https://kit.fontawesome.com/4eca1fe67d.js" crossorigin="anonymous"></script>
-
+<?php
+session_start(); 
+$count = 0; 
+if(isset($_SESSION['cart'])){
+    $count = count($_SESSION['cart']);
+}
+?>
 <header>
         <nav>
             <div class="logo">
@@ -26,7 +32,7 @@
             </div>
             <ul>
                 <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href=""><i class="fa-solid fa-cart-shopping"></i> Cart(0)</a></li>
+                <li><a href="viewCart.php"><i class="fa-solid fa-cart-shopping"></i> Cart(<?php echo $count ?>)</a></li>
                 <li> <a href=""><i class="fa-solid fa-user"></i> Hello,</a></li>
                 <li><a href="">Login</a></li>
                 <li><a href="../admin/mystore.php">Admin</a></li>
