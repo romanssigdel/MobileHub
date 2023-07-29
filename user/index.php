@@ -65,7 +65,7 @@
                                                 </a>
                                             </div>
                                             <div class="price-review">
-                                                <span class="price"><?php echo $pprice; ?></span>
+                                                <span class="price">Rs.<?php echo $pprice; ?></span>
                                                 <span class="review-summary">
                                                     <img src='../img/star-icon.png' alt=''>
                                                     <span class="rating-result">4.2</span>
