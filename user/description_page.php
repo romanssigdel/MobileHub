@@ -16,7 +16,7 @@
         display: flex;
         /* width: 100%; */
         border: 1px solid rgb(219, 219, 222);
-        margin:100px;
+        margin: 100px;
     }
 
     .first-col {
@@ -61,12 +61,13 @@
     .product-details {
         display: flex;
         width: 65vh;
-        /* height: 92.5%; */
+        height: 92.5%;
         flex-direction: column;
         align-items: flex-start;
         border: 2px solid red;
         padding: 20px;
     }
+
     .price {
         height: 15px;
         width: 90px;
@@ -112,34 +113,36 @@
                 $pprice = $row['Pprice'];
                 $pimg = $row['Pimage'];
         ?>
-                <div class="first-col">
-                    <div class="product-image">
-                        <!-- <span class="product-image-container" style="width: 240px;"> -->
-                        <!-- <span class="product-image-wrapper"> -->
-                        <img class="product-image-photo" src="../admin/product/<?php echo $pimg ?>" max-width="240" max-height="300">
-                        <!-- </span> -->
-                        </span>
+                <form action="insertcart.php" method="post">
+                    <div class="first-col">
+                        <div class="product-image">
+                            <!-- <span class="product-image-container" style="width: 240px;"> -->
+                            <!-- <span class="product-image-wrapper"> -->
+                            <img class="product-image-photo" src="../admin/product/<?php echo $pimg ?>" max-width="240" max-height="300">
+                            <!-- </span> -->
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="second-col">
-                    <div class="product-details">
-                        <div class="product-item-name">
-                            <a class="product-item-link" href=""><?php echo $pname; ?></a>
+                    <div class="second-col">
+                        <div class="product-details">
+                            <div class="product-item-name">
+                                <a class="product-item-link" href=""><?php echo $pname; ?></a>
+                            </div>
+                            <div class="price-review">
+                                <span class="price"><?php echo $pprice; ?></span>
+                            </div>
+                            <div class="review">
+                                <span class="rate">Rating: </span>
+                                <span class="star-icon"><img src='../img/star-icon.png' alt=''></span>
+                                <span class="rating-result">4.2</span>
+                            </div>
+                            <input type="hidden" name="pname" value="<?php echo $pname ?>" id="">
+                            <input type="hidden" name="pprice" value="<?php echo $pprice ?>" id="">
+                            <input type="number" name="pquantity" id="" min='1' max='20' placeholder="Quantity">
+                            <input type="submit" name="addCart" class="btn-cart" value="Add to cart"></input>
                         </div>
-                        <div class="price-review">
-                            <span class="price"><?php echo $pprice; ?></span>
-                        </div>
-                        <div class="review">
-                            <span class="rate">Rating: </span>
-                            <span class="star-icon"><img src='../img/star-icon.png' alt=''></span>
-                            <span class="rating-result">4.2</span>
-                        </div>
-                        <input type="text" name="Pname" value="" id="">
-                        <input type="number" name="" id="" min='1' max ='20' placeholder="Quantity">
-                        <input type="submit" class="btn-cart" value="Add to cart"></input>
-                        
                     </div>
-                </div>
+                </form>
 
     </div>
 <?php
