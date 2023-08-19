@@ -34,7 +34,7 @@ if(isset($_SESSION['cart'])){
                 <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
                 <li><a href="viewCart.php"><i class="fa-solid fa-cart-shopping"></i> Cart(<?php echo $count ?>)</a></li>
                 <li> <a href=""><i class="fa-solid fa-user"></i> Hello,</a></li>
-                <li><a href="">Login</a></li>
+                <li><a href="../user/form/login.php">Login</a></li>
                 <li><a href="../admin/mystore.php">Admin</a></li>
             </ul>
         </nav>
