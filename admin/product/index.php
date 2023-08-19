@@ -48,6 +48,7 @@
                             <th>Price</th>
                             <th>Image</th>
                             <th>Delete</th>
+                            <th>Update</th>
                         </tr>
                     </thead>
                     
@@ -65,7 +66,8 @@
                                     <td>$rows[Pname]</td>
                                     <td>Rs.$rows[Pprice]</td>
                                     <td><img src='$rows[Pimage]' height = '90px' width= '200px' alt='Image'></td>
-                                    <td><a href='' class='btn btn-danger'>Home</a></td>
+                                    <td><a href='delete.php?Id=$rows[id]' class='btn btn-danger'>Delete</a></td>
+                                    <td><a href='update.php?Id=$rows[id]' class='btn btn-danger'>Update</a></td>
                                 </tr>
                                 ";
                             }
