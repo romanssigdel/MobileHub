@@ -41,8 +41,8 @@ if (isset($_POST['submit'])) {
             </script>
             ";
         }else{
-            mysqli_query($con,"INSERT INTO tbluser (`UserName`, `Email`, `Number`, `Password`) 
-                  VALUES ('$Name', '$Email', '$Number', '$Password')");
+            // mysqli_query($con,"INSERT INTO tbluser (`UserName`, `Email`, `Number`, `Password`) 
+            //     --   VALUES ('$Name', '$Email', '$Number', '$Password')");
                  echo "<script>
                  alert('Registered successfully');
                  window.location.href='login.php';
