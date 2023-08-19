@@ -38,7 +38,7 @@
 </div>
 <div class="col-md-6 bg-danger text-center m-auto">
     <a href="product/index.php" class="text-white text-decoration-none fs-4 fw-bold px-5 py-5 ">Add Product</a>
-    <a href="" class="text-white text-decoration-none fs-4 fw-bold px-5 py-5" >Users</a>
+    <a href="user.php" class="text-white text-decoration-none fs-4 fw-bold px-5 py-5" >Users</a>
 </div>
 </body>
 </html>
