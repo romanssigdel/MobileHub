@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <?php include "../mystore.php"?>
     <div class="container">
         <div class="row">
             <div class="col-md-6 m-auto border border-primary mt-3">
@@ -59,10 +60,11 @@
                         $query = "SELECT * FROM `tblproduct`";
                         $check = mysqli_query($con, $query);
                         if (mysqli_num_rows($check) > 0) {
+                            $i = 0;
                             while ($rows = mysqli_fetch_assoc($check)) {
                                 echo "
                                 <tr>
-                                    <td>$rows[id]</td>
+                                    <td>"?><?php echo ++$i;?><?php echo "</td>
                                     <td>$rows[Pname]</td>
                                     <td>Rs.$rows[Pprice]</td>
                                     <td><img src='$rows[Pimage]' height = '90px' width= '200px' alt='Image'></td>
