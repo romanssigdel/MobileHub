@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MobileHub</title>
 </head>
 <style>
     * {
@@ -17,6 +17,11 @@
         /* width: 100%; */
         border: 1px solid rgb(219, 219, 222);
         margin: 100px;
+    }
+
+    .img-des {
+        display: flex;
+        flex-direction: row;
     }
 
     .first-col {
@@ -34,18 +39,15 @@
         padding-top: 83%;
     }
 
-    .product-image-photo {
-        height: 357px;
-        width: 227px;
+    .product-image {
+        height: 288px;
+        width: 197px;
         margin: 15%;
     }
 
     .second-col {
-        width: 75%;
-    }
+        border-right: 1px solid rgb(219, 219, 222);
 
-    .third-col {
-        width: 50%;
     }
 
     a {
@@ -64,7 +66,6 @@
         height: 92.5%;
         flex-direction: column;
         align-items: flex-start;
-        border: 2px solid red;
         padding: 20px;
     }
 
@@ -75,21 +76,81 @@
     }
 
     .price-review {
-        margin: 15px 0;
+        /* margin: 15px 0; */
         display: flex;
         justify-content: space-between;
     }
 
     .review {
         width: 10vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .quantity {
+        margin-top: 10px;
+        padding-top: 20px;
+    }
+
+    .quantity input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+
+    .add-cart {
+        margin-top: 30px;
+        /* padding: 20px; */
     }
 
     .rate {
-        display: inline-block;
+        /* display: inline-block; */
     }
 
     .star-icon {
         display: inline-block;
+    }
+
+    /* Button styles */
+    .add-to-cart-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        background-color: rgb(33, 28, 62);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart-button:hover {
+        background-color: #2980b9;
+    }
+
+    /* Optional: Add a subtle shadow for depth */
+    .add-to-cart-button {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .third-col {
+        width: 315px;
+    }
+
+    .row1 {
+        display: flex;
+        flex-direction: row;
+        margin: 35px;
+    }
+
+    .row1 p {
+        margin-left: 20px;
     }
 </style>
 
@@ -98,7 +159,7 @@
     include "header.php";
     ?>
     <div class="main-container">
-        <a style="display:inline-block" href="index.php">Home</a>
+        <!-- <a style="display:inline-block" href="index.php">Home</a> -->
         <!-- fetching data -->
         <?php
         include "config.php";
@@ -113,23 +174,19 @@
                 $pprice = $row['Pprice'];
                 $pimg = $row['Pimage'];
         ?>
-                <form action="insertcart.php" method="post">
+                <form class="img-des" action="insertcart.php" method="post">
                     <div class="first-col">
-                        <div class="product-image">
-                            <!-- <span class="product-image-container" style="width: 240px;"> -->
-                            <!-- <span class="product-image-wrapper"> -->
-                            <img class="product-image-photo" src="../admin/product/<?php echo $pimg ?>" max-width="240" max-height="300">
-                            <!-- </span> -->
-                            </span>
+                        <div class="product-img">
+                            <img class="product-image" src="../admin/product/<?php echo $pimg ?>" max-width="240" max-height="300">
                         </div>
                     </div>
                     <div class="second-col">
                         <div class="product-details">
                             <div class="product-item-name">
-                                <a class="product-item-link" href=""><?php echo $pname; ?></a>
+                                <a class="product-item-link" href=""><?php echo ucwords($pname); ?></a>
                             </div>
                             <div class="price-review">
-                                <span class="price"><?php echo $pprice; ?></span>
+                                <span class="price"><?php echo 'Rs.' . number_format($pprice, 2); ?></span>
                             </div>
                             <div class="review">
                                 <span class="rate">Rating: </span>
@@ -138,11 +195,34 @@
                             </div>
                             <input type="hidden" name="pname" value="<?php echo $pname ?>" id="">
                             <input type="hidden" name="pprice" value="<?php echo $pprice ?>" id="">
-                            <input type="number" name="pquantity" id="" min='1' max='20' placeholder="Quantity">
-                            <input type="submit" name="addCart" class="btn-cart" value="Add to cart"></input>
+                            <div class="quantity">
+                                <input type="number" name="pquantity" id="" min='1' max='20' placeholder="Quantity">
+                            </div>
+                            <div class="add-cart">
+                                <input type="submit" name="addCart" class="add-to-cart-button" value="Add to cart"></input>
+                            </div>
                         </div>
                     </div>
-                </form>
+                    <div class="third-col">
+                        <h3>Why buy from us? </h3>
+                        <div class="row1">
+                            <img src="image/tag.png" alt="">
+                            <p>1 Year Warranty</p>
+                        </div>
+                        <div class="row1">
+                            <img src="image/free.png" alt="">
+                            <p>Quick Delivery & Free Shiping</p>
+                        </div>
+                        <div class="row1">
+                            <img src="image/return.png" alt="">
+                            <p>Easy Return</p>
+                        </div>
+                        <div class="row1">
+                            <img src="image/warranty.png" alt="">
+                            <p>100% Geniune</p>
+                        </div>
+                    </div>
+            </form>
 
     </div>
 <?php
