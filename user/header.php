@@ -27,8 +27,10 @@ if(isset($_SESSION['cart'])){
                 </a>
             </div>
             <div class="search">
-                <input type="text" name="" id="" placeholder="Search for products">
-                <button class="btn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                <form action="search_results.php" method="GET">
+                    <input type="search" name="search" id="search" placeholder="Search for products">
+                    <button class="btn" type="submit" name="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                </form>
             </div>
             <ul>
                 <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
