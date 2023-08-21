@@ -19,10 +19,7 @@ if (isset($_POST['submit'])) {
         // Handle empty fields error
         echo "All fields are required.";
     } else {
-        // Insert data into the database
-        // $query = "INSERT INTO tbluser (`UserName`, `Email`, `Number`, `Password`) 
-        //           VALUES ('$Name', '$Email', '$Number', '$Password')";
-
+        
         $Dup_Email=mysqli_query($con,"SELECT * FROM `tbluser` WHERE Email='$Email'");
         $Dup_UserName=mysqli_query($con,"SELECT * FROM `tbluser` WHERE UserName='$Name'");
         if(mysqli_num_rows($Dup_Email)){

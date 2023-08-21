@@ -22,7 +22,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="number">UserPhoneNumber</label>
-                        <input type="text" name="number" id="number" placeholder="Enter User Phone Number" class="form-control">
+                        <input type="number" name="number" id="number" placeholder="Enter User Phone Number" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label for="password">UserPassword</label>
