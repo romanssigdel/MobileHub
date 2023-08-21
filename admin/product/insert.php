@@ -6,13 +6,14 @@ if(isset($_POST['submit'])){
     $product_image = $_FILES['Pimage'];
     $image_loc = $_FILES['Pimage']['tmp_name']; 
     $image_name = $_FILES['Pimage']['name']; 
-    $imgage_destination ="uploadImage/".$image_name;
+    $image_destination ="uploadImage/".$image_name;
+    $product_specs = $_POST['Pspecs'];
     
-    move_uploaded_file($image_loc,$imgage_destination);
+    move_uploaded_file($image_loc,$image_destination);
 
     //insert Product
     
-    mysqli_query($con, "INSERT INTO `tblproduct`(`Pname`, `Pprice`, `Pimage`) VALUES ('$product_name','$product_price','$imgage_destination')");
+    mysqli_query($con, "INSERT INTO `tblproduct`(`Pname`, `Pprice`, `Pimage`,`Specs`) VALUES ('$product_name','$product_price','$image_destination','$product_specs')");
     
     header("Location: index.php");
     exit;
