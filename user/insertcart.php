@@ -1,5 +1,7 @@
 <?php
 session_start();
+if(isset($_SESSION['user'])){
+
 
 // Initialize 'cart' as an empty array
 if (!isset($_SESSION['cart'])) {
@@ -52,5 +54,7 @@ if(isset($_POST['update'])){
         }
     }
 }
-
+}else{
+    header("location:form/login.php");
+}
 ?>
