@@ -20,8 +20,8 @@ if (isset($_POST['submit'])) {
         echo "All fields are required.";
     } else {
         // Insert data into the database
-        $query = "INSERT INTO tbluser (`UserName`, `Email`, `Number`, `Password`) 
-                  VALUES ('$Name', '$Email', '$Number', '$Password')";
+        // $query = "INSERT INTO tbluser (`UserName`, `Email`, `Number`, `Password`) 
+        //           VALUES ('$Name', '$Email', '$Number', '$Password')";
 
         $Dup_Email=mysqli_query($con,"SELECT * FROM `tbluser` WHERE Email='$Email'");
         $Dup_UserName=mysqli_query($con,"SELECT * FROM `tbluser` WHERE UserName='$Name'");
@@ -41,8 +41,8 @@ if (isset($_POST['submit'])) {
             </script>
             ";
         }else{
-            // mysqli_query($con,"INSERT INTO tbluser (`UserName`, `Email`, `Number`, `Password`) 
-            //     --   VALUES ('$Name', '$Email', '$Number', '$Password')");
+            mysqli_query($con,"INSERT INTO tbluser (`UserName`, `Email`, `Number`, `Password`) 
+                  VALUES ('$Name', '$Email', '$Number', '$Password')");
                  echo "<script>
                  alert('Registered successfully');
                  window.location.href='login.php';

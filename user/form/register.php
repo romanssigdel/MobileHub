@@ -22,7 +22,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="number">UserPhoneNumber</label>
-                        <input type="number" name="number" id="number" placeholder="Enter User Phone Number" class="form-control">
+                        <input type="text" name="number" id="number" placeholder="Enter User Phone Number" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label for="password">UserPassword</label>
@@ -126,84 +126,5 @@
                         }
                     });
                 </script>
-    <!-- <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        const form = document.getElementById("myForm");
-
-                        form.addEventListener("submit", function(event) {
-                            event.preventDefault();
-                            const nameInput = document.getElementById("name");
-                            const emailInput = document.getElementById("email");
-                            const numInput = document.getElementById("number");
-                            const passwordInput = document.getElementById("password");
-
-                            const nameValue = nameInput.value.trim();
-                            const emailValue = emailInput.value.trim();
-                            const numValue = numInput.value.trim();
-                            const passwordValue = passwordInput.value.trim();
-
-                            if (nameValue === "") {
-                                alert("Please enter a valid UserName.");
-                                nameInput.focus();
-                                return;
-                            }
-
-                            if (emailValue === "") {
-                                alert("Please enter a valid Email.");
-                                emailInput.focus();
-                                return;
-                            }
-
-                            if (!isValidEmail(emailValue)) {
-                                alert("Please enter a valid Email.");
-                                emailInput.focus();
-                                return;
-                            }
-
-                            if (numValue === "") {
-                                alert("Please Enter your Phone Number");
-                                numInput.focus();
-                                return;
-                            }
-
-                            if (!isValidNepaliPhoneNumber(numValue)) {
-                                alert("Please enter a valid Nepali Phone Number.");
-                                numInput.focus();
-                                return;
-                            }
-
-                            if (passwordValue === "") {
-                                alert("Please enter a Password");
-                                passwordInput.focus();
-                                return;
-                            }
-
-                            if (passwordValue.length < 8) {
-                                alert("Password should be at least 8 characters long");
-                                passwordInput.focus();
-                                return;
-                            }
-
-                            // If all validations pass, submit the form
-                            form.submit();
-                        });
-
-                        function isValidEmail(email) {
-                            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                            return emailRegex.test(email);
-                        }
-
-                        function isValidNepaliPhoneNumber(number) {
-                            // Remove any whitespace or special characters from the phone number
-                            number = number.replace(/\D/g, '');
-
-                            // Regular expression to match valid Nepali phone numbers
-                            const phoneNumberRegex = /^(98|97|96|95|94|980|981|982|983)\d{7}$/;
-
-                            return phoneNumberRegex.test(number);
-                        }
-                    });
-                </script> -->
-
 </body>
 </html>
