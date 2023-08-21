@@ -16,7 +16,7 @@
         display: flex;
         /* width: 100%; */
         border: 1px solid rgb(219, 219, 222);
-        margin: 100px;
+        margin: 100px 100px 0 100px;
     }
 
     .img-des {
@@ -152,6 +152,44 @@
     .row1 p {
         margin-left: 20px;
     }
+
+    .specs {
+        margin: 0 0 0 100px;
+    }
+    /* Style the table */
+  table {
+    border-collapse: collapse;
+    width: 93%;
+    border: 1px solid #e0e0e0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Style table header */
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Style alternate rows */
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  /* Add a hover effect */
+  tr:hover {
+    background-color: #e0e0e0;
+  }
+
+  /* Add some box-shadow to the table */
+  table {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
 </style>
 
 <body>
@@ -159,7 +197,7 @@
     include "header.php";
     ?>
     <div class="main-container">
-        <!-- <a style="display:inline-block" href="index.php">Home</a> -->
+        <a href="index.php">Home</a>
         <!-- fetching data -->
         <?php
         include "config.php";
@@ -195,7 +233,7 @@
                                 <span class="rating-result">4.2</span>
                             </div>
                             <div class="specs">
-                                <?php echo "Specifications:<br>".$pspecs;?>
+                                <?php echo "Specifications:<br>" . $pspecs; ?>
                             </div>
                             <input type="hidden" name="pname" value="<?php echo $pname ?>" id="">
                             <input type="hidden" name="pprice" value="<?php echo $pprice ?>" id="">
@@ -226,8 +264,38 @@
                             <p>100% Geniune</p>
                         </div>
                     </div>
-            </form>
+                </form>
     </div>
+    <div class="specs">
+        <table border='1'>
+            <thead>
+                <th colspan="2">Specifications</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Display</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Chipset</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Camera</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 <?php
             }
         } else {
