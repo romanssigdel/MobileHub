@@ -173,6 +173,7 @@
                 $pname = $row['Pname'];
                 $pprice = $row['Pprice'];
                 $pimg = $row['Pimage'];
+                $pspecs = $row['Specs'];
         ?>
                 <form class="img-des" action="insertcart.php" method="post">
                     <div class="first-col">
@@ -192,6 +193,9 @@
                                 <span class="rate">Rating: </span>
                                 <span class="star-icon"><img src='../img/star-icon.png' alt=''></span>
                                 <span class="rating-result">4.2</span>
+                            </div>
+                            <div class="specs">
+                                <?php echo "Specifications:<br>".$pspecs;?>
                             </div>
                             <input type="hidden" name="pname" value="<?php echo $pname ?>" id="">
                             <input type="hidden" name="pprice" value="<?php echo $pprice ?>" id="">
@@ -223,7 +227,6 @@
                         </div>
                     </div>
             </form>
-
     </div>
 <?php
             }
