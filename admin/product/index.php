@@ -31,6 +31,11 @@
                         <label class="form-label">Add Product Image:</label>
                         <input type="file" name="Pimage" class="form-control">
                     </div>
+                    <div class="mb-3">
+                        <label class="form-label">Specifications:</label><br>
+                        <textarea id="paragraph" name="Pspecs" rows="5" cols="70"></textarea>
+                        <!-- <input type="text" name="Pspecs" class="form-control"> -->
+                    </div>
                     <button name="submit" class="bg-danger fs-4 fw-bold my-3 form-control text-white">Upload</button>
                 </form>
             </div>
