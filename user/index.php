@@ -52,13 +52,13 @@
                                 
                                 <div class="product-item">
                                     <div class="product-item-info">
-                                        <a href="#">
-                                            <span class="product-image-container" style="width: 240px;">
+                                        <span class="product-image-container" style="width: 240px;">
+                                            <a href="description_page.php?myid=<?php echo $pid; ?>">
                                                 <span class="product-image-wrapper">
                                                     <img class="product-image-photo" src="../admin/product/<?php echo $pimg?>" max-width="240" max-height="300">
                                                 </span>
+                                            </a>
                                             </span>
-                                        </a>
                                         <div class="product-details">
                                             <div class="product-item-name">
                                                 <a class="product-item-link" href="description_page.php?myid=<?php echo $pid; ?>" ><?php echo $pname; ?>
@@ -89,7 +89,7 @@
         </div>
     </main>
     <footer class="flex-all-center">
-        <p>Copyright &copy; Mycart.com</p>
+        <p>Copyright &copy; Mobilehub.com</p>
     </footer>
 </body>
 
