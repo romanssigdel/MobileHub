@@ -102,9 +102,9 @@ h3{
 }
 .toolbar-product_items{
     background-color: #ffffff;
+    width: 87vw;
 }
 .product-items{
-    width: 72vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
