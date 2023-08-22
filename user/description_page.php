@@ -211,7 +211,12 @@
                 $pname = $row['Pname'];
                 $pprice = $row['Pprice'];
                 $pimg = $row['Pimage'];
-                $pspecs = $row['Specs'];
+                $pram = $row['Ram'];
+                $pcpu = $row['Cpu'];
+                $pstorage = $row['Storage'];
+                $pbattery = $row['Battery'];
+                $pdisplay = $row['Display'];
+
         ?>
                 <form class="img-des" action="insertcart.php" method="post">
                     <div class="first-col">
@@ -231,9 +236,6 @@
                                 <span class="rate">Rating: </span>
                                 <span class="star-icon"><img src='../img/star-icon.png' alt=''></span>
                                 <span class="rating-result">4.2</span>
-                            </div>
-                            <div class="specs">
-                                <?php echo "Specifications:<br>" . $pspecs; ?>
                             </div>
                             <input type="hidden" name="pname" value="<?php echo $pname ?>" id="">
                             <input type="hidden" name="pprice" value="<?php echo $pprice ?>" id="">
@@ -274,23 +276,23 @@
             <tbody>
                 <tr>
                     <td>Display</td>
-                    <td></td>
+                    <td><?php echo $pdisplay ?></td>
                 </tr>
                 <tr>
                     <td>RAM</td>
-                    <td></td>
+                    <td><?php echo $pram ?></td>
                 </tr>
                 <tr>
                     <td>CPU</td>
-                    <td></td>
+                    <td><?php echo $pcpu ?></td>
                 </tr>
                 <tr>
-                    <td>Chipset</td>
-                    <td></td>
+                    <td>Storage</td>
+                    <td><?php echo $pstorage ?></td>
                 </tr>
                 <tr>
-                    <td>Camera</td>
-                    <td></td>
+                    <td>Battery</td>
+                    <td><?php echo $pbattery ?></td>
                 </tr>
             </tbody>
         </table>
