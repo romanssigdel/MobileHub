@@ -32,9 +32,36 @@
                         <input type="file" name="Pimage" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Specifications:</label><br>
-                        <textarea id="paragraph" name="Pspecs" rows="5" cols="70"></textarea>
-                        <!-- <input type="text" name="Pspecs" class="form-control"> -->
+                        <label class="form-label">Display:</label>
+                        <input type="text" name="Pdisplay" class="form-control" placeholder="Enter Display specs">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Product CPU:</label>
+                        <input type="text" name="Pcpu" class="form-control" placeholder="Enter CPU Name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">RAM:</label>
+                        <select name="Pram" id="">
+                            <option value="2GB">2GB</option>
+                            <option value="4GB">4GB</option>
+                            <option value="8GB">8GB</option>
+                            <option value="16GB">16GB</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Storage:</label>
+                        <select name="Pstorage" id="">
+                            <option value="16GB">16GB</option>
+                            <option value="32GB">32GB</option>
+                            <option value="64GB">64GB</option>
+                            <option value="128GB">128B</option>
+                            <option value="256GB">256GB</option>
+                            <option value="512GB">512GB</option>
+                        </select>
+                        <div class="mb-3">
+                        <label class="form-label">Battery:</label>
+                        <input type="text" name="Pbattery" class="form-control" placeholder="Enter battery Wattage">
+                    </div>
                     </div>
                     <button name="submit" class="bg-danger fs-4 fw-bold my-3 form-control text-white">Upload</button>
                 </form>
