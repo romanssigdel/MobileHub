@@ -27,9 +27,9 @@
     <main>
         <div class="container" id="content">
             <div class="sidebar-toolbar-product_items" >
-                <div class="menu">
+                <!-- <div class="menu">
                     <h3>Categories</h3>
-                </div>
+                </div> -->
                 <div class="toolbar-product_items" >
                     <div class="toolbar">
                         <h3>Smartphones</h3>
