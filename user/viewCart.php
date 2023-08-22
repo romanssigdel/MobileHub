@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,38 +10,68 @@
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <!-- icons -->
     <script src="https://kit.fontawesome.com/4eca1fe67d.js" crossorigin="anonymous"></script>
-    
+    <script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js"></script>
+
 </head>
 <style>
-    .container-table{
+    .container-table {
         display: flex;
         justify-content: center;
     }
-    table{
+
+    table {
         /* color: grey; */
         border-collapse: collapse;
         align-self: center;
         font-size: 20px;
     }
-    thead{
+
+    thead {
         background-color: black;
         color: white;
     }
-    td{
+
+    td {
         padding-top: 23px;
         padding-bottom: 23px;
     }
-    th{
+
+    th {
         padding: 15px;
     }
-    td button{
+
+    td button {
         height: 42px;
         width: 55px;
     }
-    
+    .btn-pay{
+        display: flex;
+        justify-content: center;
+    }
+    #payment-button {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #3498db;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #payment-button:hover {
+        background-color: #2980b9;
+    }
+
+    #payment-button:active {
+        background-color: #1f6696;
+    }
 </style>
+
 <body>
-    <?php include 'header.php'?>
+    <?php include 'header.php'; ?>
     <div class="container1">
         <div class="row">
             <div class="col-lg-5">
@@ -65,8 +96,8 @@
                 $ptotal = 0;
                 $total = 0;
                 $i = 0;
-                if(isset($_SESSION['cart'])){
-                    foreach ($_SESSION['cart'] as $key => $value){
+                if (isset($_SESSION['cart'])) {
+                    foreach ($_SESSION['cart'] as $key => $value) {
                         $ptotal = $value['pprice'] * $value['pquantity'];
                         $total += $value['pprice'] * $value['pquantity'];
                         $i = $key + 1;
@@ -87,18 +118,57 @@
                     }
                 }
                 ?>
-                
+
             </tbody>
             <tfoot style="text-align: center;">
                 <tr>
                     <td colspan="3"></td>
                     <td>Total</td>
-                    <td>Rs.<?php echo number_format($total,2)?></td>   
+                    <td>Rs.<?php echo number_format($total, 2) ?></td>
                 </tr>
-            </tfoot>
-        </table>
-    </div>
-    <div>
-    </div>
+                </tfoot>
+            </table>
+        </div>
+        <div class="btn-pay">
+            <button id="payment-button">Pay with Khalti</button>
+        </div>
+    <script>
+        var config = {
+            // replace the publicKey with yours
+            "publicKey": "test_public_key_dc74e0fd57cb46cd93832aee0a390234",
+            "productIdentity": "1234567890",
+            "productName": "Dragon",
+            "productUrl": "http://gameofthrones.wikia.com/wiki/Dragons",
+            "paymentPreference": [
+                "KHALTI",
+                "EBANKING",
+                "MOBILE_BANKING",
+                "CONNECT_IPS",
+                "SCT",
+            ],
+            "eventHandler": {
+                onSuccess(payload) {
+                    // hit merchant api for initiating verfication
+                    console.log(payload);
+                },
+                onError(error) {
+                    console.log(error);
+                },
+                onClose() {
+                    console.log('widget is closing');
+                }
+            }
+        };
+
+        var checkout = new KhaltiCheckout(config);
+        var btn = document.getElementById("payment-button");
+        btn.onclick = function() {
+            // minimum transaction amount must be 10, i.e 1000 in paisa.
+            checkout.show({
+                amount: 5000
+            });
+        }
+    </script>
 </body>
+
 </html>
