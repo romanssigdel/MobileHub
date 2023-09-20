@@ -85,6 +85,11 @@
         width: 10vh;
         display: flex;
         flex-direction: row;
+        margin-top: 5px;
+    }
+    .review input{
+        padding: 4px;
+        width: 30px;
     }
 
     .quantity {
@@ -234,13 +239,15 @@
                             </div>
                             <div class="review">
                                 <span class="rate">Rating: </span>
-                                <span class="star-icon"><img src='../img/star-icon.png' alt=''></span>
-                                <span class="rating-result">4.2</span>
+                                <!-- <span class="star-icon"><img src='../img/star-icon.png' alt=''></span> -->
+                                <!-- <span class="rating-result">4.2</span> -->
+                                <input type="number" name="prating"  value="0" id="" min='0' max='5' placeholder="" required>
                             </div>
                             <input type="hidden" name="pname" value="<?php echo $pname ?>" id="">
                             <input type="hidden" name="pprice" value="<?php echo $pprice ?>" id="">
                             <div class="quantity">
-                                <input type="number" name="pquantity" id="" min='1' max='20' placeholder="Quantity">
+                                <span>Quantity:</span><br>
+                                <input type="number" name="pquantity"  value="1" id="" min='1' max='20' placeholder="Quantity">
                             </div>
                             <div class="add-cart">
                                 <input type="submit" name="addCart" class="add-to-cart-button" value="Add to cart"></input>

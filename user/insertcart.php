@@ -11,6 +11,7 @@ if (!isset($_SESSION['cart'])) {
     $pname = $_POST['pname'];
     $pprice = $_POST['pprice'];
     $pquantity = $_POST['pquantity'];
+    $prating = $_POST['prating'];
 
 if (isset($_POST['addCart'])) {
     $check_product = array_column($_SESSION['cart'], 'pname');
@@ -26,7 +27,9 @@ if (isset($_POST['addCart'])) {
     $_SESSION['cart'][]= array(
         'pname' => $pname,
         'pprice' => $pprice,
-        'pquantity' => $pquantity);
+        'pquantity' => $pquantity,
+        'prating'=> $prating);
+
     header("location:viewCart.php");
 }
 }
@@ -49,7 +52,8 @@ if(isset($_POST['update'])){
             $_SESSION['cart'][$key] = array(
                 'pname' => $pname,
                 'pprice' => $pprice,
-                'pquantity' => $pquantity);
+                'pquantity' => $pquantity,
+                'prating'=> $prating);
                 header("location:viewCart.php");
         }
     }
