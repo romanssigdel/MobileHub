@@ -19,53 +19,53 @@
 
 <body>
     <!-- Imported header file -->
-    <?php 
+    <?php
     include "header.php";
-     ?>
+    ?>
 
 
     <main>
         <div class="container" id="content">
-            <div class="sidebar-toolbar-product_items" >
+            <div class="sidebar-toolbar-product_items">
                 <!-- <div class="menu">
                     <h3>Categories</h3>
                 </div> -->
-                <div class="toolbar-product_items" >
+                <div class="toolbar-product_items">
                     <div class="toolbar">
                         <h3>Smartphones</h3>
                     </div>
-                    <div class="product-items" >
+                    <div class="product-items">
 
                         <!-- Database connection and fetching the data-->
                         <?php include "config.php";
                         $query = mysqli_query($con, "SELECT * FROM `tblproduct`");
-                        $check = mysqli_num_rows($query)>0;
+                        $check = mysqli_num_rows($query) > 0;
 
-                        if($check){
-                            while($row = mysqli_fetch_assoc($query)){
+                        if ($check) {
+                            while ($row = mysqli_fetch_assoc($query)) {
                                 $pid = $row['id'];
                                 $pname = $row['Pname'];
                                 $pprice = $row['Pprice'];
                                 $pimg = $row['Pimage'];
 
-                                ?>
-                                
+                        ?>
+
                                 <div class="product-item">
                                     <div class="product-item-info">
                                         <span class="product-image-container" style="width: 240px;">
                                             <a href="description_page.php?myid=<?php echo $pid; ?>">
                                                 <span class="product-image-wrapper">
-                                                    <img class="product-image-photo" src="../admin/product/<?php echo $pimg?>" max-width="240" max-height="300">
+                                                    <img class="product-image-photo" src="../admin/product/<?php echo $pimg ?>" max-width="240" max-height="300">
                                                 </span>
                                             </a>
-                                            </span>
+                                        </span>
                                         <div class="product-details">
                                             <div class="product-item-name">
-                                                <a class="product-item-link" href="description_page.php?myid=<?php echo $pid; ?>" ><?php echo $pname; ?>
+                                                <a class="product-item-link" href="description_page.php?myid=<?php echo $pid; ?>"><?php echo $pname; ?>
                                                 </a>
                                             </div>
                                             <div class="price-review">
-                                                <span class="price">Rs.<?php echo number_format($pprice,2); ?></span>
+                                                <span class="price">Rs.<?php echo number_format($pprice, 2); ?></span>
                                                 <span class="review-summary">
                                                     <img src='../img/star-icon.png' alt=''>
                                                     <span class="rating-result">4.2</span>
@@ -76,20 +76,38 @@
                                         </div>
                                     </div>
                                 </div>
-                                <?php
+                        <?php
                             }
-                        }else{
+                        } else {
                             echo "nothing";
                         }
                         // while ($row = mysqli_fetch_array($query)) {
-                            ?>
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
     </main>
     <footer class="flex-all-center">
-        <p>Copyright &copy; Mobilehub.com</p>
+        <div class="aboutus-contact-copyright">
+            <div class="copyright">
+                <p>Copyright &copy; Mobilehub.com</p>
+            </div>
+            <div class="aboutus">
+                <p>Welcome to Mobilehub! A place to find the best mobile products.
+            Mobilehub is the home to many of mobiles that you can possibly imagine—from trending companies like Apple, Samsung, Google.
+            Just put in what you're looking for, and you'll be sure to find it here.
+            Whats more?
+            We are bringing the products at irresistible prices, a hassle-free return policy, and quick delivery with free shipping on orders above Rs. 5000.
+            So, what are you waiting for? Drag your cursor to the search bar, enter the product, and place your order at the cheapest price.</p>
+            </div>
+            <div class="contact">
+                <p>Details</p>
+                <p>Banepa-10, Kavrepalanchok,Bagmati Province, Nepal</p>
+                <p>mobilehubnp@gmail.com</p>
+                <p>+977 9841324578, 001-23435</p>
+            </div>
+        </div>
     </footer>
 </body>
 
