@@ -182,12 +182,28 @@ h3{
 }
 
 footer{
-    height: 8vh;
+    height: 35vh;
     width: 100%;
     background-color: var(--main-bg-color);
     color: white;
     font-family: 'Sono','consolas';
     text-align: center;
+}
+.aboutus-contact-copyright{
+    background-color: var(--main-bg-color);
+    color: white;
+    font-family: 'Sono','consolas';
+    text-align: center;
+    margin-top: 0;
+}
+.copyright{
+    margin-top: 15px;
+}
+.aboutus{
+    margin-top: 15px;
+}
+.contact{
+    margin-top: 15px;
 }
 .flex-all-center{
     overflow: auto;
@@ -195,5 +211,4 @@ footer{
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
