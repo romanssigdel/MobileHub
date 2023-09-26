@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2023 at 04:31 PM
+-- Generation Time: Sep 26, 2023 at 06:27 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `Mobilehub`
+-- Database: `mobilehub`
 --
 
 -- --------------------------------------------------------
@@ -77,9 +77,24 @@ CREATE TABLE `tblproduct` (
 --
 
 INSERT INTO `tblproduct` (`id`, `Pname`, `Pprice`, `Pimage`, `Ram`, `Cpu`, `Storage`, `Display`, `Battery`) VALUES
-(13, 'Iphone 6', 70000, 'uploadImage/img101.jpg', '2GB', 'A6 Microchip', '32GB', '', '2500wh'),
-(14, 'iphone 14 pro max', 250000, 'uploadImage/wallhaven-exyw3o.jpg', '8GB', 'A16 Bionic', '256GB', '', '35000wh'),
-(15, 'iphone 4', 40000, 'uploadImage/Pale_Blue_Dot.png', '2GB', 'A6 Bionic', '32GB', '4.7-inch (diagonal) LED-backlit widescreen Multi‑Touch display with IPS technology', '2000wh');
+(16, 'Iphone SE 2', 70000, 'uploadImage/iphone-se-front-price-in-nepal.png', '4GB', 'Apple GPU (4-core graphics)', '64GB', '750 x 1334 pixels, 16:9 ratio (~326 ppi density)', '1821 mAh'),
+(17, 'Iphone 12', 106990, 'uploadImage/iphone-12-front-price-in-nepal.png', '4GB', 'Hexa-core (2x3.1 GHz Firestorm + 4x1.8 GHz Icestorm)', '256GB', '1170 x 2532 pixels, 19.5:9 ratio (~460 ppi density)', 'Li-Ion 2815 mAh'),
+(18, 'IPhone 14 Pro Max', 191990, 'uploadImage/iphone-14-pro-max-price-nepal.png', '8GB', 'Hexa-core (2x3.46 GHz Everest + 4x2.02 GHz Sawtooth)', '512GB', '1290 x 2796 pixels, 19.5:9 ratio (~460 ppi density)', 'Li-Ion 4323 mAh, non-removable (16.68 Wh)'),
+(19, 'iPhone 13 Pro', 174990, 'uploadImage/iphone_13_pro_silver_price_in_nepal_2.png', '8GB', 'Hexa-core (2x3.22 GHz Avalanche + 4xX.X GHz Blizzard)', '512GB', 'Super Retina XDR OLED, 120Hz, HDR10', ' Li-Ion 3095 mAh, non-removable (12.11 Wh)'),
+(20, 'iPhone 15 Pro max', 189999, 'uploadImage/apple-iphone-15-pro-max-1.jpg', '8GB', 'Hexa-core (2x3.78 GHz + 4x2.11 GHz)', '512GB', 'LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (typ), 2000 nits (HBM)', 'Li-Ion 4441 mAh, non-removable'),
+(21, 'Samsung Galaxy Z Fold 5', 226999, 'uploadImage/z_fold_5_icy_blue_1.jpg', '16GB', ' 	Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex', '256GB', '7.6 Inches Dynamic Amoled Display', 'Li-Po 4400 mAh, Non-removable'),
+(22, 'Samsung Galaxy S23 ', 127999, 'uploadImage/samsung-galgaxy-s23-green-price-nepal_1.png', '16GB', 'Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A', '256GB', '1080 x 2340 pixels, 19.5:9 ratio', 'Li-Ion 3900 mAh'),
+(23, 'Samsung Galaxy Z Flip 5', 139999, 'uploadImage/z_flip_5_graphite.jpg', '8GB', 'Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A', '256GB', '6.67 Inches Super Amoled Display', 'Li-Po 3700 mAh, non-removable'),
+(24, 'Samsung Galaxy S23 Ultra 5G', 191999, 'uploadImage/samsung-galaxy-s23-ultra-black-price-nepal.png', '16GB', 'Octa-core (1x3.36 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A', '512GB', '6.8 inches, 114.7 cm2 (~89.9% screen-to-body ratio)', 'Li-Ion 5000 mAh'),
+(25, 'Xiaomi 12 Pro 5G ', 116999, 'uploadImage/xiaomi-12-pro-grey-price-nepal.jpg', '8GB', '1440 x 3200 pixels, 20:9 ratio (~521 ppi density)', '256GB', '1440 x 3200 pixels, 20:9 ratio (~521 ppi density)', 'Li-Po 4600 mAh, non-removable'),
+(26, 'Xiaomi Redmi Note 11S', 30999, 'uploadImage/redmi-note-11-s-gray-price-nepal.jpg', '4GB', 'Octa-core (2x2.05 GHz Cortex-A76 & 6x2.0 GHz Cortex-A55)', '64GB', '1080 x 2400 pixels, 20:9 ratio (~409 ppi density)', 'Li-Po 5000 mAh'),
+(27, 'OnePlus 11 5G ', 129999, 'uploadImage/one-plus-11-green-price-nepal.png', '8GB', 'Octa-core (1x3.2 GHz Cortex-X3 & 2x2.8 GHz Cortex-A715 & 2x2.8 GHz Cortex-A710 & 3x2.0 GHz Cortex-A5', '256GB', '1440 x 3216 pixels, 20:9 ratio (~525 ppi density)', 'Li-Po 5000 mAh'),
+(28, 'Redmi A2 Plus', 11499, 'uploadImage/product_image_size_guide_1_14_.jpg', '4GB', 'Octa-core (4x2.2 GHz Cortex-A53 & 4x1.7 GHz Cortex-A53)', '64GB', '1440 x 3216 pixels, 20:9 ratio (~525 ppi density)', '5000mAh with 10W Charging'),
+(29, 'iPad mini 6', 85000, 'uploadImage/ipad-mini-6-price-in-nepal_4.png', '8GB', 'Hexa-core (2x2.93 GHz + 4xX.X GHz)', '128GB', '8.3 inches, 203.9 cm2 (~77.4% screen-to-body ratio)', 'Li-Ion, non-removable (19.3 Wh)'),
+(30, 'Realme Narzo 50i', 13499, 'uploadImage/narzo-5-i-price-in-nepal.jpg', '8GB', 'Unisoc SC9863A (octa-core CPU, 28nm)', '256GB', '6.5-inches “Mini-drop” IPS LCD panel, 400 nits peak brightness', ' 5,000mAh (reverse charging)'),
+(31, 'VIVO Y01', 13999, 'uploadImage/vivo-y01-black-price-nepal_1_1.jpg', '4GB', 'Octa-core (4x2.35 GHz Cortex-A53 & 4x1.8 GHz Cortex-A53)', '256GB', '720 x 1600 pixels, 20:9 ratio (~270 ppi density)', 'Li-Po 5000 mAh'),
+(32, 'Oppo A77 4G', 25999, 'uploadImage/oppo-a77-4g-ocena-blue-price-nepal.png', '4GB', 'MediaTek Helio G35', '64GB', 'HD+ IPS LCD panel', '5000mAh '),
+(33, 'Nothing 2', 80000, 'uploadImage/nothing2.jpeg', '8GB', 'Qualcomm Snapdragon 8+ Gen 1 Processor', '256GB', '17.02 cm (6.7 inch) Full HD+ Display', '4700 mAh Lithium ion Battery');
 
 -- --------------------------------------------------------
 
@@ -100,7 +115,8 @@ CREATE TABLE `tbluser` (
 --
 
 INSERT INTO `tbluser` (`UserName`, `Email`, `Number`, `Password`, `Id`) VALUES
-('user1', 'user1@gmail.com', '9809358455', 'user12345', 1);
+('user1', 'user1@gmail.com', '9809358455', 'user12345', 1),
+('Romans Sigdel', 'romanssigdel8@gmail.com', '9804559989', 'romans123', 2);
 
 --
 -- Indexes for dumped tables
@@ -150,13 +166,13 @@ ALTER TABLE `boughtproduct`
 -- AUTO_INCREMENT for table `tblproduct`
 --
 ALTER TABLE `tblproduct`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `tbluser`
 --
 ALTER TABLE `tbluser`
-  MODIFY `Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
