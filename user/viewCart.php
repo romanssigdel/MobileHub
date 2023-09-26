@@ -167,7 +167,7 @@
         btn.onclick = function() {
             // minimum transaction amount must be 10, i.e 1000 in paisa.
             checkout.show({
-                amount: 5000
+                amount: 10
             });
         }
     </script>
