@@ -13,7 +13,7 @@
     <?php
     include "mystore.php";
     # Connecting to database and fetching the user table.
-    $con = mysqli_connect('localhost', 'root', '', 'ecommerce1');
+    $con = mysqli_connect('localhost', 'root', '', 'mobilehub');
     $record = mysqli_query($con, "SELECT * FROM `tbluser`");
     $user_count = mysqli_num_rows($record);
     ?>

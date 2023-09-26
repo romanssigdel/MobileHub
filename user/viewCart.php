@@ -103,7 +103,7 @@
                         $total += $value['pprice'] * $value['pquantity'];
                         $i = $key + 1;
                         echo "
-                        <form action='insertcart.php' method='POST'>
+                        <form action='insertcarttodb' method='POST'>
                         <tr>
                         <td>$i</td>
                         <td><input type = 'hidden' name = 'pname' value = '$value[pname]'>$value[pname]</td>

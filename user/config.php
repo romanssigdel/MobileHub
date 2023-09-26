@@ -2,7 +2,7 @@
 $host = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'ecommerce1';
+$database = 'mobilehub';
 
 
 $con  = mysqli_connect($host,$username,$password,$database);
