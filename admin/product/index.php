@@ -54,7 +54,7 @@
                             <option value="16GB">16GB</option>
                             <option value="32GB">32GB</option>
                             <option value="64GB">64GB</option>
-                            <option value="128GB">128B</option>
+                            <option value="128GB">128GB</option>
                             <option value="256GB">256GB</option>
                             <option value="512GB">512GB</option>
                         </select>
