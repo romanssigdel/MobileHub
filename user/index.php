@@ -96,7 +96,7 @@
             <div class="aboutus">
                 <p>Welcome to Mobilehub! A place to find the best mobile products.
             Mobilehub is the home to many of mobiles that you can possibly imagine—from trending companies like Apple, Samsung, Google.
-            Just put in what you're looking for, and you'll be sure to find it here.
+            Just search for what you're looking for, and you'll be sure to find it here.
             Whats more?
             We are bringing the products at irresistible prices, a hassle-free return policy, and quick delivery with free shipping on orders above Rs. 5000.
             So, what are you waiting for? Drag your cursor to the search bar, enter the product, and place your order at the cheapest price.</p>
