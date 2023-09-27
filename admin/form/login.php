@@ -16,7 +16,7 @@
 
                 <form action="login1.php" method="POST">
                     <div class="mb-3">
-                        <p class="text-center fw-bold fs-3 text-info">Product Details:</p>
+                        <p class="text-center fw-bold fs-3 text-info">Admin Login:</p>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Name:</label>
