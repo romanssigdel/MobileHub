@@ -150,7 +150,7 @@
         data-email=""
         data-locale="auto">
         </Script>
-        <input type="text" name ="amount" value="<?php echo $total ?>">
+        <input type="hidden" name ="amount" value="<?php echo $total ?>">
     </form>
 </div>
 </body>
