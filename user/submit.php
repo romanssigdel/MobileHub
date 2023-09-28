@@ -22,6 +22,5 @@ $data = \Stripe\Charge::create(array(
 echo "<pre>";
 if($data){
     print_r("Transaction sucessfull!");
-    // header("location:.php");
 }
 ?>
