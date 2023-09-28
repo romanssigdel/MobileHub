@@ -1,18 +1,27 @@
 <?php
+
+use Stripe\Terminal\Location;
+
 require("../config.php");
 
+if(isset($_POST['stripeToken']))
 \Stripe\Stripe:: setVerifySslCerts(false);
 
 $token = $_POST['stripeToken'];
+$amount = $_POST['amount'];
+
 
 
 $data = \Stripe\Charge::create(array(
-    "amount"=>10500,
+    "amount"=>intval($amount)*100,
     "currency"=>"inr",
-    "description"=> "Mobilehub",
+    "description"=> "Bought",
     "source"=> $token,
 ));
 
 echo "<pre>";
-print_r($data);
+if($data){
+    print_r("Transaction sucessfull!");
+    // header("location:.php");
+}
 ?>

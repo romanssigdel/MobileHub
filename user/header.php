@@ -47,7 +47,7 @@
                     }
                     ?>
                 </a></li>
-            <li><a href="../admin/mystore.php">Admin</a></li>
+            <!-- <li><a href="../admin/mystore.php">Admin</a></li> -->
         </ul>
     </nav>
 </header>

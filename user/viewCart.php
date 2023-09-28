@@ -142,14 +142,15 @@
         <script src="https://checkout.stripe.com/checkout.js" 
         class="stripe-button"
         data-key="<?php echo $Publishablekey?>"
-        data-amount=<?php echo str_replace(',','', '', $ptotal) ?>
-        data-name='<?php echo "Mobilehub" ?>'
+        data-amount="<?php echo $total * 100 ?>"
+        data-name=""
         data-image = "image\logo.png"
-        data-description='<?php echo "Mobilehub" ?>'
+        data-description='Buy Product'
         data-currency="inr"
-        data-email="mobilehubnp@gmail.com"
+        data-email=""
         data-locale="auto">
         </Script>
+        <input type="text" name ="amount" value="<?php echo $total ?>">
     </form>
 </div>
 </body>
