@@ -7,7 +7,6 @@ if(isset($_SESSION['user'])){
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
 }
-// session_destroy();
     $pname = $_POST['pname'];
     $pprice = $_POST['pprice'];
     $pquantity = $_POST['pquantity'];

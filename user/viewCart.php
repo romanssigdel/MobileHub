@@ -44,10 +44,12 @@
         height: 42px;
         width: 55px;
     }
-    .btn-pay{
+
+    .btn-pay {
         display: flex;
         justify-content: center;
     }
+
     #payment-button {
         display: inline-block;
         padding: 12px 24px;
@@ -128,49 +130,28 @@
                     <td>Total</td>
                     <td>Rs.<?php echo number_format($total, 2) ?></td>
                 </tr>
-                </tfoot>
-            </table>
-        </div>
-        <div class="btn-pay">
-            <button id="payment-button">Pay with Khalti</button>
-        </div>
-    <script>
-        var config = {
-            // replace the publicKey with yours
-            "publicKey": "test_public_key_dc74e0fd57cb46cd93832aee0a390234",
-            "productIdentity": "1234567890",
-            "productName": "Dragon",
-            "productUrl": "http://gameofthrones.wikia.com/wiki/Dragons",
-            "paymentPreference": [
-                "KHALTI",
-                "EBANKING",
-                "MOBILE_BANKING",
-                "CONNECT_IPS",
-                "SCT",
-            ],
-            "eventHandler": {
-                onSuccess(payload) {
-                    // hit merchant api for initiating verfication
-                    console.log(payload);
-                },
-                onError(error) {
-                    console.log(error);
-                },
-                onClose() {
-                    console.log('widget is closing');
-                }
-            }
-        };
+            </tfoot>
+        </table>
+    </div>
+    <?php
+    require('../config.php');
 
-        var checkout = new KhaltiCheckout(config);
-        var btn = document.getElementById("payment-button");
-        btn.onclick = function() {
-            // minimum transaction amount must be 10, i.e 1000 in paisa.
-            checkout.show({
-                amount: 10
-            });
-        }
-    </script>
+    ?>
+    <div class="btn-pay">
+    <form action="submit.php" method="POST">
+        <script src="https://checkout.stripe.com/checkout.js" 
+        class="stripe-button"
+        data-key="<?php echo $Publishablekey?>"
+        data-amount=<?php echo str_replace(',','', '', $ptotal) ?>
+        data-name='<?php echo "Mobilehub" ?>'
+        data-image = "image\logo.png"
+        data-description='<?php echo "Mobilehub" ?>'
+        data-currency="inr"
+        data-email="mobilehubnp@gmail.com"
+        data-locale="auto">
+        </Script>
+    </form>
+</div>
 </body>
 
 </html>
