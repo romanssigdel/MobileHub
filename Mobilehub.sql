@@ -115,8 +115,7 @@ CREATE TABLE `tbluser` (
 --
 
 INSERT INTO `tbluser` (`UserName`, `Email`, `Number`, `Password`, `Id`) VALUES
-('user1', 'user1@gmail.com', '9809358455', 'user12345', 1),
-('Romans Sigdel', 'romanssigdel8@gmail.com', '9804559989', 'romans123', 2);
+('user1', 'user1@gmail.com', '9809358455', 'user12345', 1);
 
 --
 -- Indexes for dumped tables
