@@ -1,6 +1,10 @@
 <?php
     session_start();
     session_destroy();
-    header('location: login.php');
+    echo "
+    <script>
+    confirm('Are you sure you want to logout?');
+    window.location.href='login.php';
+    </script>";
     exit();
 ?>

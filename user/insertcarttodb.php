@@ -6,6 +6,6 @@ $prating = $_POST['prating'];
 
 include 'config.php';
 
-$query = mysqli_query($con,"INSERT INTO `boughtproduct`(`pname`, `pprice`, `pquantity`, `prating`) VALUES ('$pname','$pprice','$pquantity','$prating");
+$query = mysqli_query($con,"INSERT INTO `boughtproduct`(`pname`, `pprice`, `pquantity`, `prating`) VALUES ('$pname','$pprice','$pquantity','$prating'");
 
 ?>

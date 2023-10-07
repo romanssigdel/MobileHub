@@ -67,8 +67,8 @@
                                             <div class="price-review">
                                                 <span class="price">Rs.<?php echo number_format($pprice, 2); ?></span>
                                                 <span class="review-summary">
-                                                    <img src='../img/star-icon.png' alt=''>
-                                                    <span class="rating-result">4.2</span>
+                                                    <!-- <img src='../img/star-icon.png' alt=''>
+                                                    <span class="rating-result">4.2</span> -->
                                                 </span>
                                             </div>
                                             <span class='arrives'>Arrives: </span>
@@ -106,6 +106,12 @@
                 <p>Banepa-10, Kavrepalanchok,Bagmati Province, Nepal</p>
                 <p>mobilehubnp@gmail.com</p>
                 <p>+977 9841324578, 001-23435</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>

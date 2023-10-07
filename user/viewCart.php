@@ -105,6 +105,7 @@
                         $total += $value['pprice'] * $value['pquantity'];
                         $i = $key + 1;
                         echo "
+                        <form action='insertcarttodb.php' method='POST'>
                         <form action='insertcart.php' method='POST'>
                         <tr>
                         <td>$i</td>
@@ -117,6 +118,7 @@
                         <td><button name='remove' style='background-color: red; color:black'>Delete</button></td>
                         <td><input type='hidden' name ='item' value ='$value[pname]'></td>
                         </tr>
+                        </form>
                         </form>
                         ";
                     }
@@ -153,6 +155,11 @@
         <input type="hidden" name ="amount" value="<?php echo $total ?>">
     </form>
 </div>
+    <?php
+    if(isset($_SESSION['cart'])){
+        unset($_SESSION['cart']);
+    }
+    ?>
 </body>
 
 </html>

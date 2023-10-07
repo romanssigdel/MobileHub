@@ -10,7 +10,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 mt-5 m-auto bg-white shadow border border-info">
-                <p class="text-info text-center fs-3 fw-bold my-3">User Register</p>
+                <p class="text-info text-center fs-3 fw-bold my-3">User Login</p>
                 <form id="myForm" action="login1.php" method="POST">
                     <div class="mb-3">
                         <label for="name">UserName:</label>

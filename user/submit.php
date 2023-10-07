@@ -21,6 +21,11 @@ $data = \Stripe\Charge::create(array(
 
 echo "<pre>";
 if($data){
-    print_r("Transaction sucessfull!");
+    echo "
+    <script>
+    alert('Successfully Transaction completed');
+    window.location.href='index.php';
+    </script>";
 }
+
 ?>
