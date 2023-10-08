@@ -57,10 +57,9 @@ if ($data) {
             $pname = $cartItem['pname'];
             $pprice = $cartItem['pprice'];
             $pquantity = $cartItem['pquantity'];
-            $prating = $cartItem['prating'];
 
             // Insert product details along with the username after successful payment
-            $query = mysqli_query($con, "INSERT INTO boughtproduct (Name, pname, pprice, pquantity,prating) VALUES ('$username', '$pname', '$pprice', '$pquantity','$prating')");
+            $query = mysqli_query($con, "INSERT INTO soldproduct (username, pname, pprice, pquantity) VALUES ('$username', '$pname', '$pprice', '$pquantity')");
 
             if (!$query) {
                 echo "Error: " . mysqli_error($con);

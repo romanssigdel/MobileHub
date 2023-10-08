@@ -238,10 +238,10 @@
                                 <span class="price"><?php echo 'Rs.' . number_format($pprice, 2); ?></span>
                             </div>
                             <div class="review">
-                                <span class="rate">Rating: </span>
+                                <!-- <span class="rate">Rating: </span> -->
                                 <!-- <span class="star-icon"><img src='../img/star-icon.png' alt=''></span> -->
                                 <!-- <span class="rating-result">4.2</span> -->
-                                <input type="number" name="prating"  value="0" id="" min='0' max='5' placeholder="" required>
+                                <!-- <input type="number" name="prating"  value="0" id="" min='0' max='5' placeholder="" required> -->
                             </div>
                             <input type="hidden" name="pname" value="<?php echo $pname ?>" id="">
                             <input type="hidden" name="pprice" value="<?php echo $pprice ?>" id="">
