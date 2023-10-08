@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2023 at 06:27 PM
+-- Generation Time: Oct 08, 2023 at 10:56 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -43,16 +43,26 @@ INSERT INTO `admin` (`Id`, `Username`, `Password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `boughtproduct`
+-- Table structure for table `soldproduct`
 --
 
-CREATE TABLE `boughtproduct` (
+CREATE TABLE `soldproduct` (
   `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `pname` varchar(255) NOT NULL,
   `pprice` int(255) NOT NULL,
-  `pquantity` int(11) NOT NULL,
-  `prating` int(11) NOT NULL
+  `pquantity` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `soldproduct`
+--
+
+INSERT INTO `soldproduct` (`id`, `username`, `pname`, `pprice`, `pquantity`) VALUES
+(1, 'user1', 'IPhone 14 Pro Max', 191990, 1),
+(2, 'user1', 'Iphone SE 2', 70000, 1),
+(3, 'user1', 'IPhone 14 Pro Max', 191990, 1),
+(4, 'user1', 'Samsung Galaxy Z Flip 5', 139999, 1);
 
 -- --------------------------------------------------------
 
@@ -128,9 +138,9 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Indexes for table `boughtproduct`
+-- Indexes for table `soldproduct`
 --
-ALTER TABLE `boughtproduct`
+ALTER TABLE `soldproduct`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -156,10 +166,10 @@ ALTER TABLE `admin`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `boughtproduct`
+-- AUTO_INCREMENT for table `soldproduct`
 --
-ALTER TABLE `boughtproduct`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `soldproduct`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tblproduct`
