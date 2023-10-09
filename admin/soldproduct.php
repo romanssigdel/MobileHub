@@ -14,7 +14,7 @@
     include "mystore.php";
     # Connecting to database and fetching the user table.
     $con = mysqli_connect('localhost', 'root', '', 'mobilehub');
-    $record = mysqli_query($con, "SELECT * FROM `boughtproduct`");
+    $record = mysqli_query($con, "SELECT * FROM `soldproduct`");
     $user_count = mysqli_num_rows($record);
     ?>
 
@@ -27,8 +27,8 @@
                         <th>S.No</th>
                         <th>Username</th>
                         <th>Product name</th>
+                        <th>Product Price</th>
                         <th>Product Quantity</th>
-                        <th>Product Rating</th>
 
                     </thead>
                     <tbody class="text-center">
@@ -37,11 +37,10 @@
                         while ($row = mysqli_fetch_array($record)) {
                             echo "<tr>
                             <td>"?><?php echo ++$i;?><?php echo "</td>
-                            <td>$row[Name]</td>
+                            <td>$row[username]</td>
                             <td>$row[pname]</td>
+                            <td>$row[pprice]</td>
                             <td>$row[pquantity]</td>
-                            <td>$row[prating]</td>
-                            
                             </tr>";
                         }
                         ?>
