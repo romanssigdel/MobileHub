@@ -132,6 +132,12 @@ if (isset($_GET['Id'])) {
     if (isset($_POST['update'])) {
         $updatedName = $_POST['Pname'];
         $updatedPrice = $_POST['Pprice'];
+        $updatedQuantity = $_POST['Pquantity'];
+        $updatedDisplay = $_POST['Pdisplay'];
+        $updatedCpu = $_POST['Pcpu'];
+        $updatedRam = $_POST['Pram'];
+        $updatedStorage = $_POST['Pstorage'];
+        $updatedBattery = $_POST['Pbattery'];
         
         // Handle image update
         $updatedImage = $_FILES['Pimage'];
@@ -146,14 +152,21 @@ if (isset($_GET['Id'])) {
         }
 
         // Update the product details in the database
-        $updateQuery = "UPDATE `tblproduct` SET `Pname` = '$updatedName', `Pprice` = '$updatedPrice' $imageUpdateQuery WHERE `Id` = $productId";
+        $updateQuery = "UPDATE `tblproduct` SET `Pname` = '$updatedName', `Pprice` = '$updatedPrice',`Pquantity`='$updatedQuantity', `Display` = '$updatedDisplay',`Ram` = '$updatedRam',`Cpu` = '$updatedCpu',`Battery` = '$updatedBattery',`Storage` = '$updatedStorage' $imageUpdateQuery WHERE `Id` = $productId";
         if (mysqli_query($con, $updateQuery)) {
             // Update successful
-            header("Location: index.php");
+            echo "
+            <script>
+                alert('Successfully Updated.');
+                window.location.href='../productdetails.php';
+            </script>";
             exit;
         } else {
             // Handle update error
-            echo "Error updating product: " . mysqli_error($con);
+            echo "
+            <script>
+                alert('Update unsucessful.');
+            </script>". mysqli_error($con);
         }
     }
 
@@ -175,6 +188,11 @@ if (isset($_GET['Id'])) {
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
+<style>
+.product-image{
+    height: 200px;
+}
+</style>
 
 <body>
     <div class="container">
@@ -193,8 +211,49 @@ if (isset($_GET['Id'])) {
                         <input type="text" name="Pprice" class="form-control" value="<?php echo $product['Pprice']; ?>">
                     </div>
                     <div class="mb-3">
+                        <label class="form-label">Add Product Quantity:</label>
+                        <input type="text" name="Pquantity" class="form-control" value="<?php echo $product['Pquantity']; ?>">
+                    </div>
+                    <div class="mb-3">
                         <label class="form-label">Update Product Image:</label>
+                        <span class="product-image-container">
+                            <span class="product-image-wrapper">
+                                <img class="product-image" src="../../admin/product/<?php echo  $product['Pimage']; ?>" max-width="40" max-height="30">
+                            </span>
+                        </span>
                         <input type="file" name="Pimage" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Display:</label>
+                        <input type="text" name="Pdisplay" class="form-control" placeholder="Enter Display specs"  value="<?php echo $product['Display'];?>">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Product CPU:</label>
+                        <input type="text" name="Pcpu" class="form-control" placeholder="Enter CPU Name"  value="<?php echo $product['Cpu'];?>">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">RAM:</label>
+                        <select name="Pram" id="">
+                            <option value="2GB">2GB</option>
+                            <option value="4GB">4GB</option>
+                            <option value="8GB">8GB</option>
+                            <option value="16GB">16GB</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Storage:</label>
+                        <select name="Pstorage" id="">
+                            <option value="16GB">16GB</option>
+                            <option value="32GB">32GB</option>
+                            <option value="64GB">64GB</option>
+                            <option value="128GB">128GB</option>
+                            <option value="256GB">256GB</option>
+                            <option value="512GB">512GB</option>
+                        </select>
+                        <div class="mb-3">
+                        <label class="form-label">Battery:</label>
+                        <input type="text" name="Pbattery" class="form-control" placeholder="Enter battery Wattage"  value="<?php echo $product['Battery'];?>">
+                    </div>
                     </div>
                     <button name="update" class="bg-danger fs-4 fw-bold my-3 form-control text-white">Update</button>
                 </form>

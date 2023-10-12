@@ -88,8 +88,7 @@
                 <th>Product Name</th>
                 <th>Product Price</th>
                 <th>Product Quantity</th>
-                <th>Rating</th>
-                <th>Total Price</th>
+                <th>Price</th>
                 <th>Update</th>
                 <th>Delete</th>
             </thead>
@@ -111,7 +110,6 @@
                         <td><input type = 'hidden' name = 'pname' value = '$value[pname]'>$value[pname]</td>
                         <td><input type = 'hidden' name = 'pprice' value = '$value[pprice]'>Rs.$value[pprice]</td>
                         <td><input type = 'number' name = 'pquantity' min='1' max='20' value = '$value[pquantity]'></td>
-                        <td><input type = 'hidden' name = 'prating' min='0' max='5' value = '$value[prating]'>$value[prating]</td>
                         <td>Rs.$ptotal</td>
                         <td><button name ='update' style='background-color: green; color:black'>Update</button></td>
                         <td><button name='remove' style='background-color: red; color:black'>Delete</button></td>

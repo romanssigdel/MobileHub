@@ -36,10 +36,11 @@
 <div>
     <h2 class="text-center">Dashboard</h2>
 </div>
-<div class="col-md-6 bg-danger text-center m-auto">
+<div class="col-md-8 bg-danger text-center m-auto">
     <a href="product/index.php" class="text-white text-decoration-none fs-4 fw-bold px-5 py-5 ">Add Product</a>
     <a href="user.php" class="text-white text-decoration-none fs-4 fw-bold px-5 py-5" >Users</a>
     <a href="soldproduct.php" class="text-white text-decoration-none fs-4 fw-bold px-5 py-5" >Sold Product</a>
+    <a href="productdetails.php" class="text-white text-decoration-none fs-4 fw-bold px-5 py-5" >Product Details</a>
 </div>
 </body>
 </html>

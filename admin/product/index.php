@@ -34,10 +34,11 @@
 <div>
     <h2 class="text-center">Dashboard</h2>
 </div>
-<div class="col-md-6 bg-danger text-center m-auto">
+<div class="col-md-8 bg-danger text-center m-auto">
     <a href="index.php" class="text-white text-decoration-none fs-4 fw-bold px-5 py-5 ">Add Product</a>
     <a href="../user.php" class="text-white text-decoration-none fs-4 fw-bold px-5 py-5" >Users</a>
     <a href="../soldproduct.php" class="text-white text-decoration-none fs-4 fw-bold px-5 py-5" >Sold Product</a>
+    <a href="../productdetails.php" class="text-white text-decoration-none fs-4 fw-bold px-5 py-5" >Product Details</a>
 </div>
 
     <div class="container">
@@ -59,6 +60,10 @@
                     <div class="mb-3">
                         <label class="form-label">Add Product Image:</label>
                         <input type="file" name="Pimage" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Add Product Quantity:</label>
+                        <input type="text" name="Pquantity" class="form-control" placeholder="Enter Product Quantity">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Display:</label>
@@ -94,50 +99,6 @@
                     </div>
                     <button name="submit" class="bg-danger fs-4 fw-bold my-3 form-control text-white">Upload</button>
                 </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- fetch data -->
-    <div class="container ">
-        <div class="row">
-            <div class="col-md-8 m-auto">
-                <table class=" table border table-bordered border-secondary table-hover border my-5">
-                    <thead class="table-dark bg-dark text-white fs-5 text-center">
-                        <tr>
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Image</th>
-                            <th>Delete</th>
-                            <th>Update</th>
-                        </tr>
-                    </thead>
-                    
-                    <tbody class=" text-center">
-                        <?php
-                        //fetch data
-                        include "config.php";
-                        $query = "SELECT * FROM `tblproduct`";
-                        $check = mysqli_query($con, $query);
-                        if (mysqli_num_rows($check) > 0) {
-                            $i = 0;
-                            while ($rows = mysqli_fetch_assoc($check)) {
-                                echo "
-                                <tr>
-                                    <td>"?><?php echo ++$i;?><?php echo "</td>
-                                    <td>$rows[Pname]</td>
-                                    <td>Rs.$rows[Pprice]</td>
-                                    <td><img src='$rows[Pimage]' height = '90px' width= '200px' alt='Image'></td>
-                                    <td><a href='delete.php?Id=$rows[id]' class='btn btn-danger'>Delete</a></td>
-                                    <td><a href='update.php?Id=$rows[id]' class='btn btn-danger'>Update</a></td>
-                                </tr>
-                                ";
-                            }
-                        }
-                        ?>
-                    </tbody>
-                </table>
             </div>
         </div>
     </div>
