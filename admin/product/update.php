@@ -233,29 +233,19 @@ if (isset($_GET['Id'])) {
                     </div>
                     <div class="mb-3">
                         <label class="form-label">RAM:</label>
-                        <select name="Pram" id="">
-                            <option value="2GB">2GB</option>
-                            <option value="4GB">4GB</option>
-                            <option value="8GB">8GB</option>
-                            <option value="16GB">16GB</option>
-                        </select>
+                        <input type="text" name="Pram" class="form-control" placeholder="Enter RAM" value="<?php echo $product['Ram'];?>">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Storage:</label>
-                        <select name="Pstorage" id="">
-                            <option value="16GB">16GB</option>
-                            <option value="32GB">32GB</option>
-                            <option value="64GB">64GB</option>
-                            <option value="128GB">128GB</option>
-                            <option value="256GB">256GB</option>
-                            <option value="512GB">512GB</option>
-                        </select>
-                        <div class="mb-3">
+                        <input type="text" name="Pstorage" class="form-control" placeholder="Enter Storage Capacity" value="<?php echo $product['Storage'];?>">
+                    </div>
+                    <div class="mb-3">
                         <label class="form-label">Battery:</label>
                         <input type="text" name="Pbattery" class="form-control" placeholder="Enter battery Wattage"  value="<?php echo $product['Battery'];?>">
                     </div>
+                    <div class="mb-3">
+                        <button name="update" class="bg-danger fs-4 fw-bold my-3 form-control text-white">Update</button>
                     </div>
-                    <button name="update" class="bg-danger fs-4 fw-bold my-3 form-control text-white">Update</button>
                 </form>
             </div>
         </div>
