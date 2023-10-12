@@ -20,7 +20,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Name:</label>
-                        <input type="text" name="Username" class="form-control" placeholder="Enter Email Address">
+                        <input type="text" name="Username" class="form-control" placeholder="Enter Username">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Password:</label>
