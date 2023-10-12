@@ -33,6 +33,11 @@ if ($data) {
             if (!$query) {
                 echo "Error: " . mysqli_error($con);
             }
+            // Update pquantity in tblproduct
+            $updateQuery = mysqli_query($con, "UPDATE tblproduct SET pquantity = pquantity - $pquantity WHERE pname = '$pname'");
+            if (!$updateQuery) {
+                echo "Error updating product quantity: " . mysqli_error($con);
+            }
         }
 
         mysqli_close($con); // Close the database connection
