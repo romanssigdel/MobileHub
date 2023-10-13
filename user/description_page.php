@@ -221,7 +221,14 @@
                 $pstorage = $row['Storage'];
                 $pbattery = $row['Battery'];
                 $pdisplay = $row['Display'];
+                $pquantity = $row['Pquantity'];
 
+                if ($pquantity <= 0) {
+                    echo "'<script>
+                    alert('Out of Stock');
+                    window.location.href='index.php';
+                    </script>'";
+                }
         ?>
                 <form class="img-des" action="insertcart.php" method="post">
                     <div class="first-col">
@@ -247,7 +254,7 @@
                             <input type="hidden" name="pprice" value="<?php echo $pprice ?>" id="">
                             <div class="quantity">
                                 <span>Quantity:</span><br>
-                                <input type="number" name="pquantity"  value="1" id="" min='1' max='20' placeholder="Quantity">
+                                <input type="number" name="pquantity"  value="1" id="" min='1' max='5' placeholder="Quantity">
                             </div>
                             <div class="add-cart">
                                 <input type="submit" name="addCart" class="add-to-cart-button" value="Add to cart"></input>
