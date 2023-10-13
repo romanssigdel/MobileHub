@@ -120,7 +120,7 @@
                             number = number.replace(/\D/g, '');
 
                             // Regular expression to match valid Nepali phone numbers
-                            const phoneNumberRegex = /^(98|97|96|95|94|980|981|982|983)\d{7}$/;
+                            const phoneNumberRegex = /^(98|97|96|95|94|980|981|982|983|984|985|986)\d{7}$/;
 
                             return phoneNumberRegex.test(number);
                         }
