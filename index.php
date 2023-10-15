@@ -37,7 +37,7 @@
                     <div class="product-items">
 
                         <!-- Database connection and fetching the data-->
-                        <?php include "config.php";
+                        <?php include "connect.php";
                         $query = mysqli_query($con, "SELECT * FROM `tblproduct`");
                         $check = mysqli_num_rows($query) > 0;
 
@@ -55,7 +55,7 @@
                                         <span class="product-image-container" style="width: 240px;">
                                             <a href="description_page.php?myid=<?php echo $pid; ?>">
                                                 <span class="product-image-wrapper">
-                                                    <img class="product-image-photo" src="../admin/product/<?php echo $pimg ?>" max-width="240" max-height="300">
+                                                    <img class="product-image-photo" src="admin/product/<?php echo $pimg ?>" max-width="240" max-height="300">
                                                 </span>
                                             </a>
                                         </span>

@@ -11,7 +11,7 @@ if (isset($_GET['Id'])) {
     $query = "DELETE FROM `tblproduct` WHERE `Id` = $productId";
     if (mysqli_query($con, $query)) {
         // Deletion successful
-        // header("Location: ../productdetails.php");
+        
         echo "
             <script>
                 alert('Successfully Deleted.');

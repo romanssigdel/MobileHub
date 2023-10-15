@@ -132,7 +132,7 @@
         </table>
     </div>
     <?php
-    require('../config.php');
+    require('configApi.php');
 
     ?>
     <div class="btn-pay">

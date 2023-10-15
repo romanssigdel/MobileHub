@@ -205,7 +205,7 @@
         <a href="index.php">Home</a>
         <!-- fetching data -->
         <?php
-        include "config.php";
+        include "connect.php";
         $id = $_GET['myid'];
 
         $query = mysqli_query($con, "SELECT * FROM `tblproduct` WHERE  $id = id");
@@ -233,7 +233,7 @@
                 <form class="img-des" action="insertcart.php" method="post">
                     <div class="first-col">
                         <div class="product-img">
-                            <img class="product-image" src="../admin/product/<?php echo $pimg ?>" max-width="240" max-height="300">
+                            <img class="product-image" src="admin/product/<?php echo $pimg ?>" max-width="240" max-height="300">
                         </div>
                     </div>
                     <div class="second-col">

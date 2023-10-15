@@ -5,7 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Include the database configuration file
-include '../config.php';
+include '../connect.php';
 
 if (isset($_POST['submit'])) {
     // Get form data and sanitize them

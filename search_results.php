@@ -18,7 +18,7 @@
             <div class="product-items">
                 <?php
                 // Include the "config.php" file to establish a database connection
-                include "config.php";
+                include "connect.php";
 
                 // Check if the search form is submitted and the search query is provided
                 if (isset($_GET['search']) && !empty($_GET['search'])) {
@@ -39,7 +39,7 @@
                             echo "<a href='description_page.php?myid=" . $row['id'] . "'>";
                             echo "<span class='product-image-container' style='width: 240px;'>";
                             echo "<span class='product-image-wrapper'>";
-                            echo "<img class='product-image-photo' src='../admin/product/" . $row['Pimage'] . "' max-width='240' max-height='300'>";
+                            echo "<img class='product-image-photo' src='admin/product/" . $row['Pimage'] . "' max-width='240' max-height='300'>";
                             echo "</span>";
                             echo "</span>";
                             echo "</a>";

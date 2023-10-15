@@ -2,7 +2,7 @@
 session_start();
 use Stripe\Terminal\Location;
 
-require("../config.php");
+require("configApi.php");
 
 if (isset($_POST['stripeToken']))
     \Stripe\Stripe::setVerifySslCerts(false);
@@ -19,7 +19,7 @@ $data = \Stripe\Charge::create(array(
 
 if ($data) {
     if (isset($_SESSION['cart'])) {
-        require('config.php');
+        require('connect.php');
         $username = $_SESSION['user'];
 
         foreach ($_SESSION['cart'] as $cartItem) {

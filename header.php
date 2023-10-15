@@ -41,9 +41,9 @@
                     <?php
                     if (isset($_SESSION['user'])) {
                         echo "Hello, ".$_SESSION['user'];
-                        echo '<li><a href="../user/form/logout.php"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>';
+                        echo '<li><a href="form/logout.php"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>';
                     } else {
-                        echo '<a href="../user/form/login.php">Login</a>';
+                        echo '<a href="form/login.php">Login</a>';
                     }
                     ?>
                 </a></li>
