@@ -74,7 +74,7 @@
     </main>
 
     <!-- Include the footer -->
-    <footer class="flex-all-center">
+    <!-- <footer class="flex-all-center">
         <div class="aboutus-contact-copyright">
             <div class="copyright">
                 <p>Copyright &copy; Mobilehub.com</p>
@@ -94,7 +94,7 @@
                 <p>+977 9841324578, 001-23435</p>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </body>
 
 </html>

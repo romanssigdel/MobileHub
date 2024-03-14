@@ -93,7 +93,7 @@
             <div class="copyright">
                 <p>Copyright &copy; Mobilehub.com</p>
             </div>
-            <div class="aboutus">
+            <!-- <div class="aboutus">
                 <p>Welcome to Mobilehub! A place to find the best mobile products.
             Mobilehub is the home to many of mobiles that you can possibly imagine—from trending companies like Apple, Samsung, Google.
             Just search for what you're looking for, and you'll be sure to find it here.
@@ -112,7 +112,7 @@
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-whatsapp"></i></a>
-            </div>
+            </div> -->
         </div>
     </footer>
 </body>
